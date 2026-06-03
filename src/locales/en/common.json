@@ -1,0 +1,142 @@
+{
+  "app": {
+    "name": "Finesheet",
+    "tagline": "Marketplace Escrow Calculator"
+  },
+  "nav": {
+    "upload": "Upload",
+    "dashboard": "Dashboard",
+    "validation": "Validation"
+  },
+  "theme": {
+    "dark": "Dark Mode",
+    "light": "Light Mode"
+  },
+  "lang": {
+    "switch": "Language"
+  },
+  "upload": {
+    "title": "Upload Marketplace Files",
+    "subtitle": "Upload export files from Shopee and TikTok Shop to calculate escrow",
+    "dropzone": "Drag & drop files here",
+    "dropzoneActive": "Drop files here...",
+    "browse": "Browse Files",
+    "supportedFormats": "Formats: CSV, XLSX, XLS",
+    "multiFile": "Multi-file upload supported",
+    "calculating": "Calculating Escrow...",
+    "calculate": "Calculate Escrow",
+    "recalculate": "Recalculate",
+    "clear": "Clear All",
+    "fileDetected": "File Detected",
+    "confidence": "Confidence",
+    "noFiles": "No files uploaded yet",
+    "noFilesDesc": "Upload export files from Shopee or TikTok Shop to get started",
+    "tutorialHint": "Need help getting started?",
+    "tutorialLink": "View Tutorial"
+  },
+  "detection": {
+    "shopee_order": "Shopee Order",
+    "tiktok_order": "TikTok Order",
+    "tiktok_affiliate": "TikTok Affiliate",
+    "tiktok_income": "TikTok Income",
+    "unknown": "Unknown"
+  },
+  "progress": {
+    "parsing": "Parsing Files",
+    "detecting": "Detecting Marketplace",
+    "detectingAffiliate": "Detecting Affiliate Files",
+    "validating": "Validating Data Relationships",
+    "calculatingShopee": "Calculating Shopee",
+    "calculatingTiktok": "Calculating TikTok",
+    "generating": "Generating Report",
+    "completed": "Completed"
+  },
+  "dashboard": {
+    "title": "Escrow Dashboard",
+    "subtitle": "Marketplace escrow calculation summary",
+    "grandTotal": "Grand Total Escrow",
+    "shopeeEscrow": "Shopee Escrow",
+    "tiktokEscrow": "TikTok Escrow",
+    "totalOrders": "Total Orders",
+    "totalOrder": "Total Orders",
+    "totalEscrow": "Total Escrow",
+    "totalAdmin": "Total Admin Fee",
+    "totalService": "Total Service Fee",
+    "totalProcess": "Total Processing Fee",
+    "totalAffiliate": "Total Affiliate Deduction",
+    "marketplace": "Marketplace",
+    "shopee": "Shopee",
+    "tiktok": "TikTok",
+    "combined": "Combined",
+    "grandTotalRow": "Grand Total",
+    "noData": "No data yet",
+    "noDataDesc": "Upload files and calculate escrow first",
+    "viewValidation": "View Validation"
+  },
+  "validation": {
+    "title": "Validation Mode",
+    "subtitle": "Verify calculation results before use",
+    "detectedFiles": "Detected Files",
+    "shopeeFiles": "Shopee Files",
+    "tiktokOrderFiles": "TikTok Order Files",
+    "tiktokAffiliateFiles": "TikTok Affiliate Files",
+    "tiktokIncomeFiles": "TikTok Income Files",
+    "statistics": "Statistics",
+    "shopeeOrders": "Shopee Orders",
+    "tiktokOrders": "TikTok Orders",
+    "affiliateOrders": "Affiliate Orders",
+    "paidOrders": "Paid Orders",
+    "removedOrders": "Removed Orders",
+    "duplicateOrders": "Duplicate Orders",
+    "uniqueOrders": "Unique Orders",
+    "warnings": "Warnings",
+    "summary": "Validation Summary",
+    "noWarnings": "No warnings",
+    "backToDashboard": "Back to Dashboard",
+    "warningMissingAffiliate": "TikTok affiliate file not found. Affiliate deductions will not be calculated.",
+    "warningMissingIncome": "TikTok income file not found. Paid orders cannot be identified.",
+    "warningDuplicate": "Duplicate orders found and removed from calculation.",
+    "warningLowConfidence": "Some files have low confidence scores. Please verify file classification."
+  },
+  "export": {
+    "excel": "Export Excel",
+    "pdf": "Export PDF",
+    "print": "Print Report",
+    "exporting": "Exporting...",
+    "success": "Exported successfully!",
+    "error": "Export failed"
+  },
+  "tutorial": {
+    "title": "How to Use Finesheet",
+    "close": "Close",
+    "step1Title": "Download Shopee Files",
+    "step1Desc": "Open Shopee Seller Center and download the following files:",
+    "step1Items": ["Order Shipping (In Delivery)", "Order To Ship (Pending Shipment)"],
+    "step2Title": "Download TikTok Shop Files",
+    "step2Desc": "Open TikTok Seller Center and download the following files:",
+    "step2Items": ["Order File (Orders)", "Affiliate File (Affiliate)", "Income File (Income)"],
+    "step3Title": "Upload Files",
+    "step3Desc": "Upload all files at once to the upload area. The system will automatically detect file types.",
+    "step4Title": "Calculate Escrow",
+    "step4Desc": "Click the 'Calculate Escrow' button to start automatic calculation.",
+    "step5Title": "Review Results",
+    "step5Desc": "Check results on Dashboard and Validation Mode:",
+    "step5Items": ["Dashboard — escrow summary per marketplace", "Validation Mode — data verification details"],
+    "step6Title": "Export Report",
+    "step6Desc": "Export or print calculation results:",
+    "step6Items": ["Export Excel — multi-sheet file", "Export PDF — professional report", "Print Report — direct print"]
+  },
+  "toast": {
+    "filesUploaded": "Files uploaded successfully",
+    "calculationComplete": "Calculation complete",
+    "calculationError": "An error occurred during calculation",
+    "fileRemoved": "File removed",
+    "allCleared": "All files cleared"
+  },
+  "error": {
+    "title": "An Error Occurred",
+    "tryAgain": "Try Again",
+    "invalidFile": "Invalid file",
+    "parseError": "Failed to read file"
+  }
+}

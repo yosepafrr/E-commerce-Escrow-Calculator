@@ -1,0 +1,142 @@
+{
+  "app": {
+    "name": "Finesheet",
+    "tagline": "Kalkulator Escrow Marketplace"
+  },
+  "nav": {
+    "upload": "Upload",
+    "dashboard": "Dashboard",
+    "validation": "Validasi"
+  },
+  "theme": {
+    "dark": "Mode Gelap",
+    "light": "Mode Terang"
+  },
+  "lang": {
+    "switch": "Bahasa"
+  },
+  "upload": {
+    "title": "Upload File Marketplace",
+    "subtitle": "Upload file export dari Shopee dan TikTok Shop untuk menghitung escrow",
+    "dropzone": "Seret & lepas file di sini",
+    "dropzoneActive": "Lepas file di sini...",
+    "browse": "Pilih File",
+    "supportedFormats": "Format: CSV, XLSX, XLS",
+    "multiFile": "Multi-file upload didukung",
+    "calculating": "Menghitung Escrow...",
+    "calculate": "Hitung Escrow",
+    "recalculate": "Hitung Ulang",
+    "clear": "Hapus Semua",
+    "fileDetected": "File Terdeteksi",
+    "confidence": "Kepercayaan",
+    "noFiles": "Belum ada file yang di-upload",
+    "noFilesDesc": "Upload file export dari Shopee atau TikTok Shop untuk memulai",
+    "tutorialHint": "Bingung cara menggunakan?",
+    "tutorialLink": "Lihat Tutorial"
+  },
+  "detection": {
+    "shopee_order": "Shopee Order",
+    "tiktok_order": "TikTok Order",
+    "tiktok_affiliate": "TikTok Affiliate",
+    "tiktok_income": "TikTok Income",
+    "unknown": "Tidak Dikenal"
+  },
+  "progress": {
+    "parsing": "Parsing File",
+    "detecting": "Mendeteksi Marketplace",
+    "detectingAffiliate": "Mendeteksi File Affiliate",
+    "validating": "Validasi Relasi Data",
+    "calculatingShopee": "Menghitung Shopee",
+    "calculatingTiktok": "Menghitung TikTok",
+    "generating": "Membuat Laporan",
+    "completed": "Selesai"
+  },
+  "dashboard": {
+    "title": "Dashboard Escrow",
+    "subtitle": "Ringkasan perhitungan escrow marketplace",
+    "grandTotal": "Total Escrow Gabungan",
+    "shopeeEscrow": "Escrow Shopee",
+    "tiktokEscrow": "Escrow TikTok",
+    "totalOrders": "Total Pesanan",
+    "totalOrder": "Total Order",
+    "totalEscrow": "Total Escrow",
+    "totalAdmin": "Total Biaya Admin",
+    "totalService": "Total Biaya Layanan",
+    "totalProcess": "Total Biaya Proses",
+    "totalAffiliate": "Total Potongan Affiliate",
+    "marketplace": "Marketplace",
+    "shopee": "Shopee",
+    "tiktok": "TikTok",
+    "combined": "Gabungan",
+    "grandTotalRow": "Grand Total",
+    "noData": "Belum ada data",
+    "noDataDesc": "Upload file dan hitung escrow terlebih dahulu",
+    "viewValidation": "Lihat Validasi"
+  },
+  "validation": {
+    "title": "Mode Validasi",
+    "subtitle": "Verifikasi hasil perhitungan sebelum digunakan",
+    "detectedFiles": "File Terdeteksi",
+    "shopeeFiles": "File Shopee",
+    "tiktokOrderFiles": "File TikTok Order",
+    "tiktokAffiliateFiles": "File TikTok Affiliate",
+    "tiktokIncomeFiles": "File TikTok Income",
+    "statistics": "Statistik",
+    "shopeeOrders": "Shopee Orders",
+    "tiktokOrders": "TikTok Orders",
+    "affiliateOrders": "Affiliate Orders",
+    "paidOrders": "Paid Orders (Cair)",
+    "removedOrders": "Removed Orders",
+    "duplicateOrders": "Duplicate Orders",
+    "uniqueOrders": "Unique Orders",
+    "warnings": "Peringatan",
+    "summary": "Ringkasan Validasi",
+    "noWarnings": "Tidak ada peringatan",
+    "backToDashboard": "Kembali ke Dashboard",
+    "warningMissingAffiliate": "File affiliate TikTok tidak ditemukan. Potongan affiliate tidak akan dihitung.",
+    "warningMissingIncome": "File income TikTok tidak ditemukan. Order yang sudah cair tidak dapat diidentifikasi.",
+    "warningDuplicate": "Ditemukan order duplikat yang telah dihapus dari perhitungan.",
+    "warningLowConfidence": "Beberapa file memiliki confidence score rendah. Periksa klasifikasi file."
+  },
+  "export": {
+    "excel": "Export Excel",
+    "pdf": "Export PDF",
+    "print": "Print Laporan",
+    "exporting": "Mengexport...",
+    "success": "Berhasil diexport!",
+    "error": "Gagal mengexport"
+  },
+  "tutorial": {
+    "title": "Cara Menggunakan Finesheet",
+    "close": "Tutup",
+    "step1Title": "Download File Shopee",
+    "step1Desc": "Buka Shopee Seller Center, lalu download file berikut:",
+    "step1Items": ["Order Shipping (Sedang Dikirim)", "Order To Ship (Perlu Dikirim)"],
+    "step2Title": "Download File TikTok Shop",
+    "step2Desc": "Buka TikTok Seller Center, lalu download file berikut:",
+    "step2Items": ["Order File (Pesanan)", "Affiliate File (Affiliate)", "Income File (Penghasilan)"],
+    "step3Title": "Upload File",
+    "step3Desc": "Upload seluruh file sekaligus ke area upload. Sistem akan mendeteksi tipe file secara otomatis.",
+    "step4Title": "Hitung Escrow",
+    "step4Desc": "Klik tombol 'Hitung Escrow' untuk memulai perhitungan otomatis.",
+    "step5Title": "Review Hasil",
+    "step5Desc": "Periksa hasil pada Dashboard dan Validation Mode:",
+    "step5Items": ["Dashboard — ringkasan escrow per marketplace", "Validation Mode — detail verifikasi data"],
+    "step6Title": "Export Laporan",
+    "step6Desc": "Export atau cetak hasil perhitungan:",
+    "step6Items": ["Export Excel — file multi-sheet", "Export PDF — laporan profesional", "Print Report — cetak langsung"]
+  },
+  "toast": {
+    "filesUploaded": "File berhasil di-upload",
+    "calculationComplete": "Perhitungan selesai",
+    "calculationError": "Terjadi kesalahan saat menghitung",
+    "fileRemoved": "File dihapus",
+    "allCleared": "Semua file dihapus"
+  },
+  "error": {
+    "title": "Terjadi Kesalahan",
+    "tryAgain": "Coba Lagi",
+    "invalidFile": "File tidak valid",
+    "parseError": "Gagal membaca file"
+  }
+}

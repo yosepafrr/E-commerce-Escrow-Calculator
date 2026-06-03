@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: oklch(0.98 0.002 240);
+  --foreground: oklch(0.14 0.02 260);
+  --card: oklch(0.97 0.003 240);
+  --card-foreground: oklch(0.14 0.02 260);
+  --popover: oklch(0.97 0.003 240);
+  --popover-foreground: oklch(0.14 0.02 260);
+  --primary: oklch(0.55 0.18 265);
+  --primary-foreground: oklch(0.98 0.002 240);
+  --secondary: oklch(0.93 0.01 240);
+  --secondary-foreground: oklch(0.25 0.02 260);
+  --muted: oklch(0.93 0.01 240);
+  --muted-foreground: oklch(0.5 0.02 260);
+  --accent: oklch(0.93 0.01 240);
+  --accent-foreground: oklch(0.25 0.02 260);
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(0.98 0.002 240);
+  --border: oklch(0.88 0.01 240);
+  --input: oklch(0.88 0.01 240);
+  --ring: oklch(0.55 0.18 265);
+  --radius: 0.625rem;
+
+  --shopee: #ee4d2d;
+  --tiktok: #69c9d0;
+  --success: #00b894;
+  --warning: #fdcb6e;
+}
+
+.dark {
+  --background: oklch(0.12 0.015 260);
+  --foreground: oklch(0.93 0.01 240);
+  --card: oklch(0.17 0.02 260);
+  --card-foreground: oklch(0.93 0.01 240);
+  --popover: oklch(0.17 0.02 260);
+  --popover-foreground: oklch(0.93 0.01 240);
+  --primary: oklch(0.6 0.18 265);
+  --primary-foreground: oklch(0.98 0.002 240);
+  --secondary: oklch(0.22 0.02 260);
+  --secondary-foreground: oklch(0.93 0.01 240);
+  --muted: oklch(0.22 0.02 260);
+  --muted-foreground: oklch(0.6 0.015 260);
+  --accent: oklch(0.22 0.02 260);
+  --accent-foreground: oklch(0.93 0.01 240);
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(0.98 0.002 240);
+  --border: oklch(0.28 0.02 260);
+  --input: oklch(0.28 0.02 260);
+  --ring: oklch(0.6 0.18 265);
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.5 0.01 260 / 0.3);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.5 0.01 260 / 0.5);
+}
+
+/* Animated gradient for cards */
+.card-glow {
+  position: relative;
+  overflow: hidden;
+}
+.card-glow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, oklch(0.6 0.18 265 / 0.3), transparent, oklch(0.6 0.18 265 / 0.1));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Animated counter */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-count-up {
+  animation: countUp 0.6s ease-out forwards;
+}
+
+/* Step fade in */
+@keyframes fadeInStep {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.animate-fade-step {
+  animation: fadeInStep 0.4s ease-out forwards;
+}
+
+/* Drop zone pulse */
+@keyframes dropPulse {
+  0%, 100% { border-color: oklch(0.6 0.18 265 / 0.3); }
+  50% { border-color: oklch(0.6 0.18 265 / 0.7); }
+}
+.drop-pulse {
+  animation: dropPulse 1.5s ease-in-out infinite;
+}
+
+/* Glass effect */
+.glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12px;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
+
+.print-only {
+  display: none;
+}
+
+/* Spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
