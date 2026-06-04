@@ -7,10 +7,12 @@ export interface ShopeeOrder {
   biayaLayanan: number;
   biayaProses: number;
   estimasiPenghasilan: number;
+  escrowStatus: 'Belum Cair' | 'Sudah Cair' | 'Dihapus Dari Escrow';
 }
 
 export interface ShopeeResult {
   orders: ShopeeOrder[];
+  allOrders: ShopeeOrder[];
   totalOrder: number;
   totalEscrow: number;
   totalBiayaAdmin: number;

@@ -197,6 +197,7 @@ export function calculateTiktokEscrow(
         potonganAffiliate: sku.potonganAffiliate,
         estimasiPenghasilan: sku.estimasiPenghasilan,
         isAffiliate: sku.isAffiliate,
+        escrowStatus: incomeOrders.has(sku.orderId) ? 'Sudah Cair' : 'Belum Cair',
       });
     }
   }
@@ -281,6 +282,7 @@ export function calculateTiktokEscrow(
 
   return {
     orders: escrowOrders,
+    allOrders: allOrders,
     totalOrder: escrowOrders.length,
     totalEscrow,
     totalBiayaAdmin,
@@ -299,6 +301,7 @@ export function calculateTiktokEscrow(
 function emptyResult(): TiktokResult {
   return {
     orders: [],
+    allOrders: [],
     totalOrder: 0,
     totalEscrow: 0,
     totalBiayaAdmin: 0,

@@ -12,7 +12,7 @@ import {
   Upload, BarChart3, ShieldCheck, FileSpreadsheet, FileText, Printer,
   Sun, Moon, ChevronRight, X, CheckCircle2, Circle, Loader2, AlertTriangle,
   Info, HelpCircle, Download, Calculator, Eye, FileOutput,
-  ArrowLeft, Package, TrendingUp, DollarSign, Users, Trash2
+  ArrowLeft, Package, TrendingUp, DollarSign, Users, Trash2, ListFilter
 } from 'lucide-react';
 
 // ====== THEME HOOK ======
@@ -32,8 +32,10 @@ function useTheme() {
   return { dark, toggle: () => setDark(d => !d) };
 }
 
+import OrdersExplorer from '@/components/OrdersExplorer';
+
 // ====== MAIN APP ======
-type Page = 'upload' | 'dashboard' | 'validation';
+type Page = 'upload' | 'dashboard' | 'validation' | 'orders';
 
 export default function App() {
   const { t, i18n } = useTranslation();
@@ -586,12 +588,16 @@ export default function App() {
               </div>
 
               {/* View Validation Link */}
-              <div className="text-center">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 border-t border-[var(--border)]">
+                <button onClick={() => setPage('orders')}
+                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-[var(--primary)] text-white rounded-lg font-medium hover:bg-[var(--primary)]/90 shadow-sm transition-all">
+                  <ListFilter className="w-4 h-4" />
+                  {t('dashboard.allData')}
+                </button>
                 <button onClick={() => setPage('validation')}
-                  className="inline-flex items-center gap-2 text-sm font-medium text-[var(--primary)] hover:underline">
+                  className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-medium text-[var(--primary)] bg-[var(--primary)]/10 hover:bg-[var(--primary)]/20 rounded-lg transition-colors">
                   <ShieldCheck className="w-4 h-4" />
                   {t('dashboard.viewValidation')}
-                  <ChevronRight className="w-4 h-4" />
                 </button>
               </div>
             </div>
@@ -645,10 +651,11 @@ export default function App() {
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                 {[
                   { label: t('validation.shopeeOrders'), value: result.shopee?.totalOrder ?? 0, icon: Package },
-                  { label: t('validation.tiktokOrders'), value: result.tiktok?.totalOrder ?? 0, icon: Package },
+                  { label: t('validation.tiktokOrders'), value: (result.tiktok?.totalOrder ?? 0) + (result.tiktok?.paidOrderCount ?? 0), icon: Package },
                   { label: t('validation.affiliateOrders'), value: result.tiktok?.affiliateOrderCount ?? 0, icon: Users },
                   { label: t('validation.paidOrders'), value: result.tiktok?.paidOrderCount ?? 0, icon: CheckCircle2 },
                   { label: t('validation.removedOrders'), value: result.tiktok?.removedOrderCount ?? 0, icon: X },
+                  { label: t('validation.tiktokOrdersFiltered'), value: result.tiktok?.totalOrder ?? 0, icon: Package },
                   { label: t('validation.duplicateOrders'), value: (result.shopee?.duplicateCount ?? 0) + (result.tiktok?.duplicateCount ?? 0), icon: AlertTriangle },
                   { label: t('validation.uniqueOrders'), value: result.grandTotalOrders, icon: CheckCircle2 },
                 ].map(stat => (
@@ -708,8 +715,13 @@ export default function App() {
           </div>
         )}
 
+        {/* ====== ORDERS EXPLORER PAGE ====== */}
+        {page === 'orders' && result && (
+          <OrdersExplorer result={result} onBack={() => setPage('dashboard')} />
+        )}
+
         {/* No data fallback */}
-        {(page === 'dashboard' || page === 'validation') && !result && (
+        {(page === 'dashboard' || page === 'validation' || page === 'orders') && !result && (
           <div className="text-center py-20 text-[var(--muted-foreground)]">
             <BarChart3 className="w-16 h-16 mx-auto mb-4 opacity-30" />
             <p className="text-lg font-medium">{t('dashboard.noData')}</p>

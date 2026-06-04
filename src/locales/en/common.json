@@ -71,7 +71,8 @@
     "grandTotalRow": "Grand Total",
     "noData": "No data yet",
     "noDataDesc": "Upload files and calculate escrow first",
-    "viewValidation": "View Validation"
+    "viewValidation": "View Validation",
+    "allData": "Show All Sales Data"
   },
   "validation": {
     "title": "Validation Mode",
@@ -84,6 +85,7 @@
     "statistics": "Statistics",
     "shopeeOrders": "Shopee Orders",
     "tiktokOrders": "TikTok Orders",
+    "tiktokOrdersFiltered": "TikTok Orders Filtered",
     "affiliateOrders": "Affiliate Orders",
     "paidOrders": "Paid Orders",
     "removedOrders": "Removed Orders",

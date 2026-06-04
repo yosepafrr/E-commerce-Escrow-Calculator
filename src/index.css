@@ -64,6 +64,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Ensure all buttons have pointer cursor */
+button:hover,
+[role="button"]:hover {
+  cursor: pointer;
+}
+button:disabled:hover,
+button:disabled {
+  cursor: not-allowed;
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 6px;
@@ -144,10 +154,33 @@ body {
   .print-only {
     display: block !important;
   }
+  
+  /* Order Explorer Table Print Styles */
+  .print-table-container {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  table {
+    page-break-inside: auto;
+  }
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tfoot {
+    display: table-footer-group;
+  }
 }
 
 .print-only {
   display: none;
+}
+
+select {
+  cursor: pointer;
 }
 
 /* Spinner */

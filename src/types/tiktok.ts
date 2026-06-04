@@ -8,10 +8,12 @@ export interface TiktokOrder {
   potonganAffiliate: number;
   estimasiPenghasilan: number;
   isAffiliate: boolean;
+  escrowStatus: 'Belum Cair' | 'Sudah Cair' | 'Dihapus Dari Escrow';
 }
 
 export interface TiktokResult {
   orders: TiktokOrder[];
+  allOrders: TiktokOrder[];
   totalOrder: number;
   totalEscrow: number;
   totalBiayaAdmin: number;

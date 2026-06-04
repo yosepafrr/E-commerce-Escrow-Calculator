@@ -142,6 +142,7 @@ export function calculateShopeeEscrow(orderFiles: DetectedFile[]): ShopeeResult 
         biayaLayanan: sku.biayaLayanan,
         biayaProses: sku.biayaProses,
         estimasiPenghasilan: sku.estimasiPenghasilan,
+        escrowStatus: 'Belum Cair',
       });
     }
   }
@@ -176,6 +177,7 @@ export function calculateShopeeEscrow(orderFiles: DetectedFile[]): ShopeeResult 
 
   return {
     orders: dedupedOrders,
+    allOrders: dedupedOrders,
     totalOrder: dedupedOrders.length,
     totalEscrow,
     totalBiayaAdmin,
@@ -190,6 +192,7 @@ export function calculateShopeeEscrow(orderFiles: DetectedFile[]): ShopeeResult 
 function emptyResult(): ShopeeResult {
   return {
     orders: [],
+    allOrders: [],
     totalOrder: 0,
     totalEscrow: 0,
     totalBiayaAdmin: 0,

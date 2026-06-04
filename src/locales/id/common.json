@@ -71,7 +71,8 @@
     "grandTotalRow": "Grand Total",
     "noData": "Belum ada data",
     "noDataDesc": "Upload file dan hitung escrow terlebih dahulu",
-    "viewValidation": "Lihat Validasi"
+    "viewValidation": "Lihat Validasi",
+    "allData": "Tampilkan Semua Data Penjualan"
   },
   "validation": {
     "title": "Mode Validasi",
@@ -84,6 +85,7 @@
     "statistics": "Statistik",
     "shopeeOrders": "Shopee Orders",
     "tiktokOrders": "TikTok Orders",
+    "tiktokOrdersFiltered": "TikTok Orders Terfilter",
     "affiliateOrders": "Affiliate Orders",
     "paidOrders": "Paid Orders (Cair)",
     "removedOrders": "Removed Orders",
